@@ -8,6 +8,8 @@ mysteryWord = random.choice(wordList)
 
 guessList = []
 
+win = list(mysteryWord)
+
 for letter in mysteryWord:
 	guessList.append("_")
 
@@ -34,4 +36,8 @@ while True:
 			if letter == guess:
 				guessList[count] = guess
 			count += 1
-			print(guessList)
+	if guessList == win:
+		print("You win")
+
+print(guessList)
+
